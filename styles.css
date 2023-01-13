@@ -1,0 +1,35 @@
+.game-row{
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  height: 600px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: grey;
+  justify-content: center;
+  justify-content: space-between;
+}
+.game-area{
+  width: 800px;
+  height: 100%;
+  background-color: rgb(73, 113, 126);
+  position: relative;
+}
+.lander{
+  width: 50px;
+  position: absolute;
+  bottom: 800px;
+  left: 450px;
+}
+.lander img{
+  width: 100%;
+}
+.projectile{
+  width: 30px;
+  position: absolute;
+  bottom: 300px;
+  left: 450px;
+}
+.projectile-img{
+  width: 100%;
+}
