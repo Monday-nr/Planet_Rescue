@@ -1,29 +1,91 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Moonlander</title>
+    <title>Planet Rescue</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="game-row" id="game-row-id">
-      <div>border</div>
+  <body class="body">
 
-      <div class="game-area" id="game-area-id">
-        <div class="lander" id="lander-hull">
-          <img src="sprites/lander.png" alt="" />
+    <div class="top-row" id="top-row-id">
+      <div class="border-top-left"></div>
+
+      <div class="UI-top">
+        <div class="score-border">
+          <div class="score-display" id="score-display-id"></div>  
         </div>
-
-        <div class="projectile" id="projectile-id">
-          <img class="projectile-img" src="sprites/projectile.png" alt="" />
+        <div class="health-border">
+          <div class="health-display" id="health-display-id"></div>  
         </div>
       </div>
-
-      <div>border</div>
+      <div class="border-top-right"></div>
     </div>
 
-    <script src="game/settings.js"></script>
-    <script src="game/lander.js"></script>
+    <div class="game-row" id="game-row-id">
+
+        <div class="UI-left"></div>
+     
+      
+      <div class="game-area" id="game-area-id">
+        <div class="no-pointer-events">
+
+         <div id="background-div"></div>
+
+          <div id="enemy-container"></div>        
+          <div id="projectile-container"></div>
+          <div id="soldier-container"></div>
+
+        </div>  
+      </div>
+
+        <div class="UI-right">
+          <div class="fuel-border">
+            <div class="fuel-gouge">
+              <div class="fuel-meter" id="fuel-meter" ></div>
+            </div>
+          </div>
+        </div>
+
+    </div>
+    <div class="bottom-row" id="bottom-row-id">
+      <div class="border-bottom-left"></div>
+      <div class="UI-bottom">
+        <!--<button id="start-button">Launch</button>-->
+      </div>
+      <div class="border-bottom-right"></div>
+    </div>
+
+    <div class="sounds">
+      <audio id="sound-rocket">
+        <source src="sounds/projectile2.mp3" type="audio/mp3">
+      </audio>
+      <audio id="sound-ambience">
+        <source src="sounds/ambience2.mp3" type="audio/mp3">
+      </audio>
+      <audio id="sound-explosion">
+        <source src="sounds/explosion2.mp3" type="audio/mp3">
+      </audio>
+      <audio id="sound-thruster">
+        <source src="sounds/thruster2.mp3" type="audio/mp3">
+      </audio> 
+      <audio id="sound-alert">
+        <source src="sounds/alert_2.mp3" type="audio/mp3">
+      </audio>
+      <audio id="sound-button1">
+        <source src="sounds/button_1.wav" type="audio/wav">
+      </audio>
+      <audio id="sound-button2">
+        <source src="sounds/button_2.wav" type="audio/wav">
+      </audio>
+      <audio id="sound-explosion_lander">
+        <source src="sounds/explosion_lander.mp3" type="audio/mp3">
+      </audio> 
+    </div>
+
+    <script src="game/globals.js"></script>
+    <script src="game/enemies.js"></script>
     <script src="game/projectiles.js"></script>
+    <script src="game/soldier.js"></script>
+    <script src="game/lander.js"></script>
     <script src="game/main.js"></script>
   </body>
 </html>
